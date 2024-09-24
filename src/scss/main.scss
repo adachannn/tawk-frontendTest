@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext");
+@import 'font-awesome.css';
+@import "../node_modules/bootstrap/scss/bootstrap";
+$fa-font-path: './assets/fontawesome/webfonts';
+@import './assets/fontawesome/scss/fontawesome.scss';
+@import './assets/fontawesome/scss/solid.scss';
+
+/* ============== Common Element ============== */
+.top-right-btn{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+}
+.no-content-msg{
+  color: gray;
+}
+.updated-date-format{
+  color: grey;
+  font-size: 13px;
+}
+.section-title{
+  color: gray;
+  text-align: center;
+}
+.categories-container{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: var(--bs-gutter-x);
+  min-height: 200px;
+  background:white;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  cursor: auto;
+}
+.box-format{
+  background:white;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.box-format:hover{
+  background-color: lightgrey;
+}
+
+
+/* ============== Font-awesome customize ==============*/
+.fa-format{
+  color: #21ae59;
+  margin: 10px 0;
+}
+.green-box{
+  background-color: #21ae59;
+  color: white;
+}
+.fa-shadow{
+  text-shadow: 2px 2px 4px lightgray;
+}
+.fa-format-height{
+  min-height: 50px;
+}
+
+
+
