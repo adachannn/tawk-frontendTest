@@ -7,8 +7,8 @@
       <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-7">
           <div class="search-container d-flex">
-            <input class="search-input flex-grow-1" type="text" v-model="search" placeholder="Search for answers">
-            <div class="green-box search-icon">
+            <input class="search-input flex-grow-1" type="text" v-model="search" placeholder="Search for answers" @keyup.enter="searchResult">
+            <div class="green-box search-icon" @click="searchResult">
               <div class="fa-solid fa-1x fa-search"></div>
             </div>
           </div>
@@ -48,6 +48,19 @@ export default {
       search: null,
     };
   },
+  methods: {
+    searchResult() {
+      // this.$router.push({name: 'search', params: {'searchTitle': this.search}});
+      if (this.$route.name === 'search') {
+        this.$router.push({ name: 'dummy' }); // Navigate to a dummy route first
+      }
+      this.$router.push({
+        name: 'search',
+        params: { 'searchTitle': this.search }
+      });
+      this.search = ''
+    }
+  }
 }
 </script>
 
@@ -79,5 +92,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 </style>

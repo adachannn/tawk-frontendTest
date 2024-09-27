@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import CategoriesList from '../components/CategoriesList.vue';
 import CategoryView from "../components/CategoryView.vue";
+import SearchResult from "../components/SearchResult.vue";
 
 Vue.use(Router)
 
@@ -21,6 +22,18 @@ const router = new Router({
             props: (route) => ({ categoryId: route.params.categoryId, categoryTitle: route.params.categoryTitle }),
             meta: { breadcrumb: null },
         },
+        {
+            path: '/search',
+            name: 'search',
+            component: SearchResult,
+            props: (route) => ({ searchTitle: route.params.searchTitle }),
+            meta: { breadcrumb:
+                    [
+                        {text: "All categories", link: '/'},
+                        {text: "Search results"}
+                    ]
+            }
+        }
     ]
 });
 

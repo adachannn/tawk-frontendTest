@@ -82,32 +82,4 @@ export default {
 h6{
   margin-bottom: 0;
 }
-.articles-container{
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: auto; /* Dynamic height based on the content */
-  max-height: 500px;
-}
-.article-div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 25px;
-  margin: 0 auto 10px auto;
-  cursor: pointer;
-  border: solid 1px #e4e4e4;
-  border-radius: 5px;
-  background-color: white;
-  min-height: 90px;
-}
-.left-content {
-  display: flex;
-  align-items: center;
-}
-.article-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 20px;
-}
 </style>
